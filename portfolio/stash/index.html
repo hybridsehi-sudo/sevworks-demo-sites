@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STASH 2026 — DON'T STOP DIGGIN' | 西東京最大級の古着フェス</title>
+<meta name="description" content="STASH 2026 / DON'T STOP DIGGIN' — 9.22-23 多摩センター駅前歩道。都内各地の人気古着屋が集結する西東京最大級の古着フェス。先行入場チケット販売中／出店者募集中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Permanent+Marker&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0c0c; --concrete:#16151a; --paper:#f3efe2;
+  --acid:#d8ff00; --magenta:#ff2d95; --orange:#ff5a00; --cyan:#00e6ff; --purple:#8a4bff;
+  --line:rgba(255,255,255,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink); color:var(--paper); font-family:"Noto Sans JP",sans-serif; overflow-x:hidden; -webkit-font-smoothing:antialiased}
+body::before{content:""; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cond{font-family:"Bebas Neue",sans-serif;letter-spacing:.02em}
+.disp{font-family:"Anton",sans-serif}
+.mark{font-family:"Permanent Marker",cursive}
+.mono{font-family:"Space Mono",monospace}
+a{color:inherit;text-decoration:none}
+section{position:relative}
+
+/* TAPE */
+.tape{background:var(--acid); color:#0c0c0c; border-top:3px solid #0c0c0c; border-bottom:3px solid #0c0c0c; overflow:hidden; white-space:nowrap; padding:7px 0; position:sticky; top:0; z-index:200}
+.tape .roll{display:inline-block; animation:roll 22s linear infinite; font-family:"Anton",sans-serif; font-size:18px; letter-spacing:.08em}
+.tape .roll span{padding:0 18px}
+.tape .roll i{font-style:normal; color:var(--magenta)}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* NAV */
+nav{position:absolute; top:54px; left:0; right:0; z-index:150; display:flex; align-items:center; justify-content:space-between; padding:18px 24px}
+nav .logo{font-family:"Anton",sans-serif; font-size:26px; letter-spacing:.04em; color:#fff}
+nav .logo b{color:var(--acid)}
+nav .links{display:flex; gap:20px; align-items:center; font-family:"Bebas Neue",sans-serif; font-size:19px; letter-spacing:.06em}
+nav .links a{opacity:.85; transition:.2s}
+nav .links a:hover{opacity:1; color:var(--acid)}
+nav .tk{background:var(--magenta); color:#fff; padding:8px 16px; border:2px solid #fff; transform:rotate(-2deg); transition:.15s}
+nav .tk:hover{background:var(--acid); color:#0c0c0c; border-color:#0c0c0c}
+@media(max-width:760px){nav .links a:not(.tk){display:none}}
+
+/* HERO */
+.hero{min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:120px 18px 60px; overflow:hidden;
+  background:radial-gradient(circle at 20% 18%, rgba(255,45,149,.20), transparent 38%),radial-gradient(circle at 82% 72%, rgba(0,230,255,.16), transparent 40%),repeating-linear-gradient(45deg,#121118 0 22px,#0e0d12 22px 44px)}
+.hero .kicker{font-family:"Space Mono",monospace; font-weight:700; letter-spacing:.32em; font-size:12px; color:var(--acid); border:1px solid var(--acid); padding:7px 14px; margin-bottom:22px; transform:rotate(-1deg)}
+.hero h1{font-family:"Anton",sans-serif; line-height:.82; letter-spacing:.01em; font-size:clamp(80px,20vw,230px); color:#fff; text-shadow:6px 6px 0 var(--magenta), 12px 12px 0 var(--cyan)}
+.hero h1 .o{-webkit-text-stroke:3px var(--acid); color:transparent; text-shadow:none}
+.hero .sub{font-family:"Permanent Marker",cursive; font-size:clamp(24px,5vw,48px); color:var(--acid); transform:rotate(-3deg); margin:12px 0 4px}
+.hero .meta{display:flex; gap:10px 26px; flex-wrap:wrap; justify-content:center; margin-top:24px; font-family:"Bebas Neue",sans-serif; font-size:clamp(22px,3.4vw,32px); letter-spacing:.05em}
+.hero .meta .d{color:var(--acid)} .hero .meta i{font-style:normal;color:var(--magenta);padding:0 6px}
+.hero .free{font-family:"Noto Sans JP";font-weight:900;font-size:14px;letter-spacing:.08em;color:#fff;margin-top:8px;opacity:.85}
+.hero .cta{display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:30px}
+.btn{font-family:"Anton",sans-serif; font-size:20px; letter-spacing:.04em; padding:15px 30px; cursor:pointer; border:3px solid #0c0c0c; transition:.15s; display:inline-flex; align-items:center; gap:10px}
+.btn.p{background:var(--acid); color:#0c0c0c; box-shadow:6px 6px 0 var(--magenta)}
+.btn.p:hover{transform:translate(3px,3px); box-shadow:2px 2px 0 var(--magenta)}
+.btn.m{background:var(--magenta); color:#fff; border-color:#fff; box-shadow:6px 6px 0 var(--cyan)}
+.btn.m:hover{transform:translate(3px,3px); box-shadow:2px 2px 0 var(--cyan)}
+.btn.g{background:transparent; color:#fff; border-color:#fff}
+.btn.g:hover{background:#fff;color:#0c0c0c}
+.hero .urg{margin-top:16px; font-family:"Space Mono";font-size:12px;letter-spacing:.1em;color:var(--magenta)}
+.hero .urg b{color:var(--acid)}
+.sticker{position:absolute; font-family:"Permanent Marker",cursive; user-select:none; z-index:3; transition:transform .2s}
+.sticker:hover{transform:scale(1.12) rotate(6deg)!important}
+.st1{top:16%; left:8%; background:var(--magenta); color:#fff; padding:8px 14px; transform:rotate(-12deg); font-size:18px}
+.st2{top:22%; right:7%; background:var(--cyan); color:#0c0c0c; padding:9px 15px; transform:rotate(9deg); font-size:17px}
+.st3{bottom:24%; left:11%; background:var(--acid); color:#0c0c0c; padding:8px 14px; transform:rotate(7deg); font-size:17px}
+.st4{bottom:18%; right:12%; background:#fff; color:#0c0c0c; padding:8px 14px; transform:rotate(-7deg); font-size:16px; border:2px dashed var(--orange)}
+.st5{top:46%; left:4%; color:var(--orange); font-size:28px; transform:rotate(-18deg)}
+.st6{top:40%; right:4%; color:var(--purple); font-size:28px; transform:rotate(15deg)}
+@media(max-width:760px){.sticker{display:none}}
+.scrollcue{position:absolute; bottom:16px; left:50%; transform:translateX(-50%); font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.3em; color:rgba(255,255,255,.6); animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* SHELL */
+.wrap{max-width:1100px; margin:0 auto; padding:0 22px}
+.sec{padding:92px 0}
+.eyebrow{font-family:"Space Mono",monospace; font-weight:700; letter-spacing:.3em; font-size:13px; color:var(--magenta); margin-bottom:14px}
+.htitle{font-family:"Anton",sans-serif; font-size:clamp(38px,7.5vw,88px); line-height:.9; color:#fff}
+.htitle .o{-webkit-text-stroke:2px var(--acid); color:transparent}
+.reveal{opacity:0; transform:translateY(36px); transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1; transform:none}
+
+/* WHY COME (benefits) */
+.why{background:var(--paper); color:#0c0c0c}
+.why .htitle{color:#0c0c0c} .why .htitle .o{-webkit-text-stroke:2px var(--magenta)} .why .eyebrow{color:var(--orange)}
+.bens{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin-top:40px}
+.ben{background:#0c0c0c; color:var(--paper); padding:30px 26px; border:3px solid #0c0c0c; position:relative; transition:.2s}
+.ben:hover{transform:translateY(-6px)}
+.ben:nth-child(2){background:var(--magenta);color:#fff}
+.ben:nth-child(3){background:var(--cyan);color:#0c0c0c}
+.ben .no{font-family:"Anton";font-size:54px;line-height:1;opacity:.25;position:absolute;top:14px;right:18px}
+.ben .bt{font-family:"Anton";font-size:26px;line-height:1.05;margin-bottom:10px}
+.ben p{font-size:14px;line-height:1.8;font-weight:700}
+
+/* INFO */
+.info .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; margin-top:40px}
+.card{border:2px solid var(--line); padding:24px; background:var(--concrete); transition:.2s}
+.card:hover{border-color:var(--acid); transform:translateY(-5px)}
+.card .lab{font-family:"Space Mono",monospace; font-size:12px; letter-spacing:.2em; color:var(--cyan); margin-bottom:10px}
+.card .val{font-family:"Bebas Neue",sans-serif; font-size:32px; line-height:1.05; color:#fff}
+.card .val small{display:block; font-size:15px; color:var(--acid); font-family:"Noto Sans JP";font-weight:700; margin-top:6px}
+.countdown{display:flex; gap:12px; margin-top:38px; flex-wrap:wrap; align-items:center}
+.cd{background:#0c0c0c; border:2px solid var(--magenta); padding:14px 18px; min-width:84px; text-align:center}
+.cd b{font-family:"Anton",sans-serif; font-size:40px; color:var(--acid); display:block; line-height:1}
+.cd span{font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.2em; color:#fff}
+.cd-lab{font-family:"Space Mono";font-size:12px;color:#888;letter-spacing:.15em}
+
+/* LINEUP */
+.lineup{background:#0a0a0a}
+.shops{display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:14px; margin-top:38px}
+.shop{aspect-ratio:1; display:flex; flex-direction:column; justify-content:flex-end; padding:16px; position:relative; border:2px solid #0c0c0c; overflow:hidden; cursor:pointer; transition:.18s}
+.shop:hover{transform:scale(1.04) rotate(-1deg); z-index:5}
+.shop .tag{position:absolute; top:10px; right:10px; font-family:"Space Mono",monospace; font-size:10px; background:#0c0c0c; color:#fff; padding:3px 7px}
+.shop b{font-family:"Anton",sans-serif; font-size:23px; line-height:.95; color:#0c0c0c}
+.shop span{font-family:"Space Mono",monospace; font-size:11px; color:#0c0c0c; opacity:.7}
+.more{display:flex; align-items:center; justify-content:center; border:2px dashed var(--line); background:transparent}
+.more b{color:var(--acid); font-size:17px; text-align:center}
+
+/* EXHIBITOR RECRUIT */
+.exhibit{background:linear-gradient(0deg,#0c0c0c,#0c0c0c),repeating-linear-gradient(-45deg,#1a1320 0 24px,#120d18 24px 48px); background-blend-mode:overlay}
+.exhibit .htitle .o{-webkit-text-stroke:2px var(--magenta)}
+.exgrid{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:40px; align-items:start}
+@media(max-width:820px){.exgrid{grid-template-columns:1fr}}
+.exwhy{display:flex;flex-direction:column;gap:14px}
+.exwhy .row{display:flex; gap:14px; align-items:flex-start; border-left:4px solid var(--acid); padding:4px 0 4px 16px}
+.exwhy .row .ic{font-family:"Anton";font-size:26px;color:var(--acid);line-height:1;min-width:34px}
+.exwhy .row b{font-family:"Noto Sans JP";font-weight:900;font-size:17px;color:#fff;display:block;margin-bottom:3px}
+.exwhy .row p{font-size:13px;line-height:1.7;color:#bbb}
+.exwhy .price{margin-top:8px;background:var(--acid);color:#0c0c0c;padding:16px 18px;transform:rotate(-1deg)}
+.exwhy .price .mono{font-size:11px;letter-spacing:.15em}
+.exwhy .price b{font-family:"Anton";font-size:38px;line-height:1;display:block}
+.exwhy .price small{font-size:13px;font-weight:700}
+.form{border:3px solid var(--acid); background:#0c0c0c; padding:28px}
+.form h3{font-family:"Anton";font-size:26px;color:#fff;margin-bottom:4px}
+.form .note{font-family:"Space Mono";font-size:11px;color:var(--cyan);margin-bottom:18px;letter-spacing:.05em}
+.form label{display:block;font-family:"Space Mono";font-size:11px;letter-spacing:.12em;color:#aaa;margin:14px 0 6px}
+.form input,.form select,.form textarea{width:100%;background:#16151a;border:2px solid var(--line);color:#fff;padding:11px 12px;font-family:"Noto Sans JP";font-size:14px;outline:none;transition:.15s}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--acid)}
+.form textarea{resize:vertical;min-height:70px}
+.form .submit{width:100%;margin-top:20px;font-family:"Anton";font-size:20px;background:var(--magenta);color:#fff;border:3px solid #fff;padding:15px;cursor:pointer;transition:.15s;box-shadow:5px 5px 0 var(--acid)}
+.form .submit:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--acid)}
+.form .msg{margin-top:12px;font-family:"Space Mono";font-size:12px;color:var(--acid);min-height:16px}
+
+/* ACCESS */
+.access{background:var(--paper); color:#0c0c0c}
+.access .htitle{color:#0c0c0c}.access .eyebrow{color:var(--magenta)}
+.amap{display:grid; grid-template-columns:1.4fr 1fr; gap:24px; margin-top:40px; align-items:stretch}
+@media(max-width:760px){.amap{grid-template-columns:1fr}}
+.mapbox{background:repeating-linear-gradient(0deg,#e7e2d2 0 38px,#ddd8c6 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(0,0,0,.05) 38px 40px); border:3px solid #0c0c0c; min-height:270px; position:relative; display:flex; align-items:center; justify-content:center}
+.mapbox .pin{font-family:"Permanent Marker",cursive; background:var(--magenta); color:#fff; padding:10px 16px; transform:rotate(-4deg); font-size:18px; box-shadow:4px 4px 0 #0c0c0c}
+.mapbox .road{position:absolute; background:#bdb8a6}
+.qrcol{border:3px solid #0c0c0c; padding:22px; display:flex; flex-direction:column; gap:12px; background:#fff}
+.qrbox{width:100%; aspect-ratio:1; max-width:170px; margin:0 auto; background:conic-gradient(#0c0c0c 0 25%, transparent 0 50%, #0c0c0c 0 75%, transparent 0); background-size:24px 24px; border:8px solid #0c0c0c; position:relative}
+.qrbox::after{content:"DEMO"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:"Anton"; color:var(--magenta); font-size:20px; background:rgba(255,255,255,.7)}
+.access .addr{font-family:"Bebas Neue"; font-size:25px; line-height:1.1}
+.access .addr small{display:block;font-family:"Space Mono";font-size:12px;letter-spacing:.1em;margin-top:8px;opacity:.7}
+
+/* FOLLOW / FINAL CTA */
+.follow{text-align:center; padding:100px 18px; background:radial-gradient(circle at 50% 0%, rgba(216,255,0,.18), transparent 50%),repeating-linear-gradient(-45deg,#141019 0 24px,#0e0b12 24px 48px)}
+.follow .big{font-family:"Anton",sans-serif; font-size:clamp(40px,10vw,120px); line-height:.85; color:#fff; text-shadow:5px 5px 0 var(--magenta)}
+.follow .big .o{-webkit-text-stroke:2px var(--cyan); color:transparent}
+.follow p{font-weight:900; font-size:17px; margin:20px 0 26px; letter-spacing:.04em}
+.follow .sns{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+.snsbtn{font-family:"Bebas Neue"; font-size:23px; letter-spacing:.05em; padding:11px 24px; border:3px solid #fff; transition:.15s}
+.snsbtn:hover{background:var(--acid); color:#0c0c0c; border-color:#0c0c0c}
+
+footer{background:#000; padding:38px 22px; text-align:center; border-top:3px solid var(--acid)}
+footer .fl{font-family:"Anton"; font-size:32px; color:#fff; letter-spacing:.04em}
+footer .fl b{color:var(--acid)}
+footer .meta{font-family:"Space Mono"; font-size:12px; color:#888; margin-top:14px; line-height:1.9}
+.demobadge{position:fixed; bottom:14px; left:14px; z-index:9998; background:var(--magenta); color:#fff; font-family:"Space Mono"; font-weight:700; font-size:11px; letter-spacing:.15em; padding:7px 12px; transform:rotate(-3deg); border:2px solid #fff}
+</style>
+</head>
+<body>
+
+<div class="tape">
+  <div class="roll">
+    <span>先行入場チケット販売中 <i>★</i></span><span>出店者募集中 <i>★</i></span><span>STASH 2026 <i>★</i></span><span>9.22-23 多摩センター駅前歩道 <i>★</i></span>
+    <span>先行入場チケット販売中 <i>★</i></span><span>出店者募集中 <i>★</i></span><span>STASH 2026 <i>★</i></span><span>9.22-23 多摩センター駅前歩道 <i>★</i></span>
+  </div>
+</div>
+
+<nav>
+  <div class="logo"><b>STASH</b></div>
+  <div class="links">
+    <a href="#why">魅力</a>
+    <a href="#info">開催情報</a>
+    <a href="#lineup">出店</a>
+    <a href="#exhibit">出店募集</a>
+    <a href="#ticket" class="tk">チケット</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="kicker">NISHI-TOKYO VINTAGE MARKET</div>
+  <h1>ST<span class="o">A</span>SH</h1>
+  <div class="sub">DON'T STOP DIGGIN'</div>
+  <div class="meta"><span class="d">2026.09.22<i>—</i>23</span><span>多摩センター駅前歩道</span></div>
+  <div class="free">西東京最大級の古着フェス ／ 入場無料・出入自由</div>
+  <div class="cta">
+    <a href="#ticket" class="btn p">▸ 先行入場チケットを取る</a>
+    <a href="#exhibit" class="btn m">＋ 出店者として参加</a>
+  </div>
+  <div class="urg">▲ <b>先行入場枠 残りわずか</b>／一般入場は当日無料</div>
+
+  <span class="sticker st1">VINTAGE</span>
+  <span class="sticker st2">90s</span>
+  <span class="sticker st3">DIG IT</span>
+  <span class="sticker st4">used &amp; rare</span>
+  <span class="sticker st5">✶</span>
+  <span class="sticker st6">✦</span>
+  <div class="scrollcue">SCROLL ↓</div>
+</header>
+
+<!-- WHY COME -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="eyebrow reveal">WHY STASH?</div>
+    <h2 class="htitle reveal">来て、<span class="o">掘れ</span >。</h2>
+    <div class="bens">
+      <div class="ben reveal"><span class="no">01</span><div class="bt">都内の人気古着屋が<br>一堂に集結</div><p>下北・高円寺・原宿…各地から選び抜かれた40店舗以上。1日で都内中をDIGできる2日間。</p></div>
+      <div class="ben reveal"><span class="no">02</span><div class="bt">1点モノ・掘り出し物<br>がザクザク</div><p>ヴィンテージ、デッドストック、ミリタリー、ブートレグ。ここでしか出会えない"秘蔵品"を探し当てろ。</p></div>
+      <div class="ben reveal"><span class="no">03</span><div class="bt">入場無料・<br>駅前すぐ</div><p>多摩センター駅 徒歩2分。手ぶらで立ち寄れる。先行入場チケットなら混雑前にじっくり掘れる。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO + COUNTDOWN -->
+<section class="sec info" id="info">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="color:var(--cyan)">EVENT INFO</div>
+    <h2 class="htitle reveal">開催 <span class="o">情報</span></h2>
+    <div class="grid">
+      <div class="card reveal"><div class="lab">DATE</div><div class="val">SEP 22-23<small>2026 土・日</small></div></div>
+      <div class="card reveal"><div class="lab">TIME</div><div class="val">11:00-19:00<small>雨天決行</small></div></div>
+      <div class="card reveal"><div class="lab">PLACE</div><div class="val">TAMA CENTER<small>多摩センター駅前歩道</small></div></div>
+      <div class="card reveal"><div class="lab">ENTRY</div><div class="val">FREE<small>一般入場無料</small></div></div>
+    </div>
+    <div class="countdown reveal">
+      <span class="cd-lab">開催まで</span>
+      <div class="cd"><b id="cd-d">--</b><span>DAYS</span></div>
+      <div class="cd"><b id="cd-h">--</b><span>HOURS</span></div>
+      <div class="cd"><b id="cd-m">--</b><span>MINS</span></div>
+      <div class="cd"><b id="cd-s">--</b><span>SECS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section class="sec lineup" id="lineup">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="color:var(--acid)">SHOP LINE-UP</div>
+    <h2 class="htitle reveal">40+ <span class="o">SHOPS</span></h2>
+    <div class="shops" id="shops"></div>
+    <p class="mono reveal" style="margin-top:20px;color:#777;font-size:12px">※ 出店店舗はデモ用サンプルです（実データに差し替え可能）。</p>
+  </div>
+</section>
+
+<!-- EXHIBITOR RECRUIT -->
+<section class="sec exhibit" id="exhibit">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="color:var(--acid)">FOR SHOPS</div>
+    <h2 class="htitle reveal">出店者 <span class="o">募集</span></h2>
+    <div class="exgrid">
+      <div class="exwhy reveal">
+        <div class="row"><span class="ic">A</span><div><b>西東京の新規客にリーチ</b><p>都心まで出ない層が来場。新しいファンと出会える駅前立地。</p></div></div>
+        <div class="row"><span class="ic">B</span><div><b>SNSで拡散される</b><p>公式Instagram/TikTokで出店店舗を紹介。フェス当日以降も集客に。</p></div></div>
+        <div class="row"><span class="ic">C</span><div><b>シリーズ化する新ブランド</b><p>STASHは単発でなく継続イベント。第1回からの出店は"古参"の価値に。</p></div></div>
+        <div class="price">
+          <div class="mono">出店料（1ブース／2日間）</div>
+          <b>¥15,000<small> 〜</small></b>
+          <small>※ サイズ・電源オプションは申込後にご案内</small>
+        </div>
+      </div>
+      <form class="form reveal" id="exform" onsubmit="return false">
+        <h3>出店エントリー</h3>
+        <div class="note">// DEMO FORM — 実際の送信は行われません</div>
+        <label>ショップ名 *</label>
+        <input type="text" placeholder="例：DIGGERS used clothing">
+        <label>ご担当者名 *</label>
+        <input type="text" placeholder="例：山田 太郎">
+        <label>メールアドレス *</label>
+        <input type="email" placeholder="example@mail.com">
+        <label>主な取扱ジャンル</label>
+        <select>
+          <option>ヴィンテージ古着</option>
+          <option>ミリタリー / ワーク</option>
+          <option>デザイナーズ / アーカイブ</option>
+          <option>スニーカー / 雑貨</option>
+          <option>その他</option>
+        </select>
+        <label>SNSアカウント（任意）</label>
+        <input type="text" placeholder="@your_shop">
+        <label>メッセージ（任意）</label>
+        <textarea placeholder="出店への意気込み・希望ブース数など"></textarea>
+        <button class="submit" id="exbtn">▸ 出店エントリーを送信</button>
+        <div class="msg" id="exmsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="sec access" id="access">
+  <div class="wrap">
+    <div class="eyebrow reveal">ACCESS</div>
+    <h2 class="htitle reveal">FIND US</h2>
+    <div class="amap">
+      <div class="mapbox reveal">
+        <div class="road" style="top:50%;left:0;right:0;height:14px"></div>
+        <div class="road" style="left:46%;top:0;bottom:0;width:14px"></div>
+        <div class="pin">📍 STASH ココ</div>
+      </div>
+      <div class="qrcol reveal">
+        <div class="addr">多摩センター駅前歩道<small>京王・小田急・多摩モノレール「多摩センター」駅 徒歩2分</small></div>
+        <div class="qrbox"></div>
+        <p class="mono" style="font-size:11px;text-align:center;opacity:.6">QRから先行入場チケットへ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOLLOW / FINAL CTA -->
+<section class="follow" id="follow">
+  <div class="big">F<span class="o">O</span>LLOW<br>THE DIG</div>
+  <p>出店情報・タイムテーブル・限定企画は全部ココから。</p>
+  <div class="sns">
+    <a href="#" class="snsbtn">◎ INSTAGRAM</a>
+    <a href="#" class="snsbtn">✕ X / TWITTER</a>
+    <a href="#" class="snsbtn">♪ TIKTOK</a>
+  </div>
+  <div style="margin-top:38px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap" id="ticket">
+    <a href="#" class="btn p" style="font-size:24px">▸ 先行入場チケットを買う</a>
+    <a href="#exhibit" class="btn g" style="font-size:18px">出店申込はこちら</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fl"><b>STASH</b> — DON'T STOP DIGGIN'</div>
+  <div class="meta">
+    主催：一般社団法人TMC（タイムマシーンカンパニー）<br>
+    西東京最大級の古着フェス / © 2026 STASH. ALL RIGHTS RESERVED.<br>
+    — 本ページは過去のご依頼をもとに作成したデモサイトの制作例です（株式会社セブワークス制作） —<br>
+    ※完成版は伏せております。実際の納品時はより作り込んだ内容になります。
+  </div>
+</footer>
+
+<div class="demobadge">DEMO MOCKUP</div>
+
+<script>
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const cols=['#d8ff00','#ff2d95','#00e6ff','#ff5a00','#8a4bff','#f3efe2'];
+const shops=[['DIGGERS','Shibuya'],['HOARD','Koenji'],['RAW DENIM','Shimokita'],['90S CLUB','Nakano'],['MILITARY','Ueno'],['ARCHIVE','Harajuku'],['STREET','Kichijoji'],['VINTAGE TEE','Tachikawa'],['BOOTLEG','Akihabara'],['DEADSTOCK','Ekoda'],['WORK WEAR','Asagaya'],['RARE','Tama']];
+const wrap=document.getElementById('shops');
+shops.forEach((s,i)=>{const d=document.createElement('a'); d.href='#'; d.className='shop'; d.style.background=cols[i%cols.length];
+  d.innerHTML=`<span class="tag">NO.${String(i+1).padStart(2,'0')}</span><b>${s[0]}</b><span>${s[1]} / used</span>`; wrap.appendChild(d);});
+const more=document.createElement('div'); more.className='shop more'; more.innerHTML='<b>+ MORE<br>COMING</b>'; wrap.appendChild(more);
+
+const target=new Date('2026-09-22T11:00:00+09:00').getTime();
+function tick(){let now=Date.now(),g=Math.max(0,target-now);
+  const d=Math.floor(g/864e5);g-=d*864e5;const h=Math.floor(g/36e5);g-=h*36e5;const m=Math.floor(g/6e4);g-=m*6e4;const s=Math.floor(g/1e3);
+  document.getElementById('cd-d').textContent=d;document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(m).padStart(2,'0');document.getElementById('cd-s').textContent=String(s).padStart(2,'0');}
+tick();setInterval(tick,1000);
+
+document.getElementById('exbtn').addEventListener('click',()=>{
+  document.getElementById('exmsg').textContent='✓ これはデモです。実装時はこの内容が主催へ自動通知されます。';
+});
+</script>
+</body>
+</html>
