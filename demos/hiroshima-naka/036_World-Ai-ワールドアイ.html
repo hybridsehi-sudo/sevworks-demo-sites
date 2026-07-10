@@ -20,13 +20,14 @@
  .site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:var(--surface);border-bottom:1px solid #00000012}
  .site-header .brand{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.05rem;letter-spacing:.04em}
  .site-header .brand small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.62rem;letter-spacing:.18em;color:var(--sub);font-weight:500;margin-top:2px}
- .header-cta{background:var(--primary);color:#fff;padding:9px 18px;border-radius:2px;font-size:.8rem;text-decoration:none;letter-spacing:.05em;white-space:nowrap}
+ .header-cta{background:var(--primary);color:#fff;padding:10px 22px;border-radius:999px;font-size:.8rem;text-decoration:none;letter-spacing:.05em;white-space:nowrap;box-shadow:0 4px 14px -4px color-mix(in srgb, var(--primary) 60%, transparent)}
  .hero{position:relative;background:radial-gradient(circle at 30% 30%,#fdf1ee 0%,#f7e2de 55%,#f2d6d1 100%);overflow:hidden;padding:88px 24px;text-align:center;color:var(--hero-text)}
  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 50% 42%, transparent 0 27%, #d8b98a33 27.5% 28.5%, transparent 29%)}
  .hero-inner{position:relative;max-width:720px;margin:0 auto}
  .hero .eyebrow{font-family:"Zen Kaku Gothic New",sans-serif;font-size:.72rem;letter-spacing:.32em;color:var(--hero-sub);opacity:.8;margin:0 0 18px}
  .hero h1{font-size:2.3rem;margin:0 0 16px;letter-spacing:.03em;font-weight:700;color:var(--hero-text)}
  .hero .catch{font-size:1rem;opacity:.88;margin:0;letter-spacing:.02em;color:var(--hero-text)}
+ .hero .catch mark{background:var(--accent);color:#ffffff;padding:.05em .3em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
  main{max-width:760px;margin:0 auto;padding:0 20px}
  section{padding:52px 0}
  section h2{font-size:1.3rem;text-align:center;margin:0 0 32px;letter-spacing:.06em;position:relative}
@@ -45,8 +46,10 @@
  .contact-line:last-child{margin-bottom:0}
  .contact-line a{text-decoration:none;font-weight:600}
  .cta-wrap{text-align:center;margin-top:22px}
- .cta-button{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;padding:13px 34px;border-radius:2px;font-size:.9rem;letter-spacing:.06em}
- footer{text-align:center;padding:26px;font-size:.72rem;color:var(--sub)}
+ .cta-button{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;padding:14px 38px;border-radius:999px;font-size:.9rem;letter-spacing:.06em;box-shadow:0 8px 20px -6px color-mix(in srgb, var(--primary) 55%, transparent)}
+ footer{text-align:center;padding:26px 26px 84px;font-size:.72rem;color:var(--sub)}
+ .float-contact{position:fixed;right:18px;bottom:18px;z-index:10;background:var(--primary);color:#fff;border-radius:999px;padding:12px 20px;text-decoration:none;font-size:.78rem;letter-spacing:.03em;display:flex;align-items:center;gap:8px;box-shadow:0 10px 24px -8px rgba(0,0,0,.35)}
+ .float-contact svg{width:16px;height:16px;flex:none}
 </style></head>
 <body>
 <div class="notice">株式会社セブワークスが提案用に作成したサンプルです。World Ai(ワールドアイ)様の公式サイトではありません。</div>
@@ -58,7 +61,7 @@
   <div class="hero-inner">
     <p class="eyebrow">BEAUTY SALON</p>
     <h1>World Ai(ワールドアイ)</h1>
-    <p class="catch">World Ai(ワールドアイ) — 上質なひとときを、あなたに。</p>
+    <p class="catch">World Ai(ワールドアイ) — <mark>上質なひとときを、あなたに。</mark></p>
   </div>
 </section>
 <main>
@@ -90,4 +93,5 @@
 </section>
 </main>
 <footer>これは営業提案用の無料デモサイトです。</footer>
+
 </body></html>
