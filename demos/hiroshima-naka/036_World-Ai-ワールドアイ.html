@@ -17,7 +17,7 @@
  h1,h2,.serif{font-family:"Shippori Mincho",serif}
  .notice{background:#fff3cd;color:#664d03;text-align:center;padding:8px 16px;font-size:.78rem}
  a{color:inherit}
- .site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:var(--surface);border-bottom:1px solid #00000012}
+ .site-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 28px;background:var(--surface);border-bottom:1px solid #00000012}
  .site-header .brand{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.05rem;letter-spacing:.04em}
  .site-header .brand small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.62rem;letter-spacing:.18em;color:var(--sub);font-weight:500;margin-top:2px}
  .header-cta{background:var(--primary);color:#fff;padding:10px 22px;border-radius:999px;font-size:.8rem;text-decoration:none;letter-spacing:.05em;white-space:nowrap;box-shadow:0 4px 14px -4px color-mix(in srgb, var(--primary) 60%, transparent)}
@@ -50,6 +50,14 @@
  footer{text-align:center;padding:26px 26px 84px;font-size:.72rem;color:var(--sub)}
  .float-contact{position:fixed;right:18px;bottom:18px;z-index:10;background:var(--primary);color:#fff;border-radius:999px;padding:12px 20px;text-decoration:none;font-size:.78rem;letter-spacing:.03em;display:flex;align-items:center;gap:8px;box-shadow:0 10px 24px -8px rgba(0,0,0,.35)}
  .float-contact svg{width:16px;height:16px;flex:none}
+ @media (max-width:480px){
+   .site-header{padding:14px 18px}
+   .hero{padding:56px 18px}
+   .hero h1{font-size:1.6rem}
+   .hero .catch{font-size:.92rem}
+   section{padding:38px 0}
+   .about-box,.contact-card{padding:24px 20px}
+ }
 </style></head>
 <body>
 <div class="notice">株式会社セブワークスが提案用に作成したサンプルです。World Ai(ワールドアイ)様の公式サイトではありません。</div>
