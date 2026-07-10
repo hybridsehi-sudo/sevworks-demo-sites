@@ -3,24 +3,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>carol(キャロル) | デモサイト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
- body{font-family:"Hiragino Sans","Yu Gothic",sans-serif;color:#222;background:#fbfaf6;line-height:1.7;margin:0}
- .notice{background:#fff3cd;color:#664d03;text-align:center;padding:8px 16px;font-size:.8rem}
- header{background:#2f6f4f;color:#fff;padding:56px 20px;text-align:center}
- main{max-width:720px;margin:0 auto;padding:40px 20px}
- ul{list-style:none;padding:0}
- li{background:#fff;border:1px solid #e5e1d8;border-radius:8px;padding:14px 18px;margin-bottom:10px}
- .contact-box{background:#fff;border:1px solid #e5e1d8;border-radius:10px;padding:24px}
- a{color:#2f6f4f}
+ :root{
+   --bg:#faf1ef; --surface:#ffffff; --primary:#c98a86; --primary-dark:#a8635f;
+   --accent:#d8b98a; --text:#3a2b2a; --sub:#7a6360;
+ }
+ *{box-sizing:border-box}
+ body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;margin:0}
+ h1,h2,.serif{font-family:"Shippori Mincho",serif}
+ .notice{background:#fff3cd;color:#664d03;text-align:center;padding:8px 16px;font-size:.78rem}
+ a{color:inherit}
+ .site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:var(--surface);border-bottom:1px solid #00000012}
+ .site-header .brand{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.05rem;letter-spacing:.04em}
+ .site-header .brand small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.62rem;letter-spacing:.18em;color:var(--sub);font-weight:500;margin-top:2px}
+ .header-cta{background:var(--primary);color:#fff;padding:9px 18px;border-radius:2px;font-size:.8rem;text-decoration:none;letter-spacing:.05em;white-space:nowrap}
+ .hero{position:relative;background:radial-gradient(circle at 30% 30%,#fdf1ee 0%,#f7e2de 55%,#f2d6d1 100%);background-blend-mode:overlay;overflow:hidden;padding:88px 24px;text-align:center;color:#fff}
+ .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 50% 42%, transparent 0 27%, #d8b98a33 27.5% 28.5%, transparent 29%);opacity:.9}
+ .hero-inner{position:relative;max-width:720px;margin:0 auto}
+ .hero .eyebrow{font-family:"Zen Kaku Gothic New",sans-serif;font-size:.72rem;letter-spacing:.32em;opacity:.85;margin:0 0 18px}
+ .hero h1{font-size:2.3rem;margin:0 0 16px;letter-spacing:.03em;font-weight:700}
+ .hero .catch{font-size:1rem;opacity:.92;margin:0;letter-spacing:.02em}
+ main{max-width:760px;margin:0 auto;padding:0 20px}
+ section{padding:52px 0}
+ section h2{font-size:1.3rem;text-align:center;margin:0 0 32px;letter-spacing:.06em;position:relative}
+ section h2::after{content:"";display:block;width:36px;height:2px;background:var(--accent);margin:14px auto 0}
+ .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+ .feature-card{background:var(--surface);border:1px solid #00000012;border-radius:10px;padding:22px 18px;text-align:center}
+ .feature-icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--primary);color:#fff;margin-bottom:12px}
+ .feature-card p{margin:0;font-size:.88rem;color:var(--text)}
+ .menu-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+ .menu-list li{background:var(--surface);border-left:3px solid var(--accent);padding:14px 18px;font-size:.9rem}
+ .about-box{background:var(--surface);border-radius:12px;padding:32px 28px;text-align:center}
+ .about-box .industry-tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;color:#fff;background:var(--primary);padding:4px 14px;border-radius:20px;margin-bottom:14px}
+ .about-box p{margin:0;font-size:.95rem;color:var(--text)}
+ .contact-card{background:var(--surface);border:1px solid #00000012;border-radius:12px;padding:28px}
+ .contact-line{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:.92rem}
+ .contact-line:last-child{margin-bottom:0}
+ .contact-line a{text-decoration:none;font-weight:600}
+ .cta-wrap{text-align:center;margin-top:22px}
+ .cta-button{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;padding:13px 34px;border-radius:2px;font-size:.9rem;letter-spacing:.06em}
+ footer{text-align:center;padding:26px;font-size:.72rem;color:var(--sub)}
 </style></head>
 <body>
 <div class="notice">株式会社セブワークスが提案用に作成したサンプルです。carol(キャロル)様の公式サイトではありません。</div>
-<header><h1>carol(キャロル)</h1><p>carol(キャロル) — 地域で選ばれる、確かな技術と居心地の良さ。</p></header>
+<header class="site-header">
+  <div class="brand">carol(キャロル)<small>BEAUTY SALON</small></div>
+  
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">BEAUTY SALON</p>
+    <h1>carol(キャロル)</h1>
+    <p class="catch">carol(キャロル) — 上質なひとときを、あなたに。</p>
+  </div>
+</section>
 <main>
-<section><h2>選ばれる理由</h2><ul><li>経験豊富なスタッフによる丁寧な施術</li>
-<li>落ち着いた店内でリラックスできる空間</li>
-<li>スマホから簡単に空き状況を確認・予約</li></ul></section>
-<section><h2>店舗情報</h2><div class="contact-box"><p>ADDR: 広島県広島市中区鉄砲町8-24</p></div></section>
+<section class="strengths">
+  <h2>選ばれる理由</h2>
+  <div class="feature-grid"><div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>経験豊富なスタッフによる丁寧な施術</p></div>
+<div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>落ち着いた空間でリラックスできるひととき</p></div>
+<div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>スマホから簡単に空き状況を確認・予約</p></div></div>
+</section>
+<section class="menu">
+  <h2>メニュー</h2>
+  <ul class="menu-list"><li>まつげエクステ</li>
+<li>パリジェンヌラッシュリフト</li>
+<li>まつげパーマ</li>
+<li>オフのみ対応</li></ul>
+</section>
+<section class="about">
+  <h2>carol(キャロル)について</h2>
+  <div class="about-box">
+    <span class="industry-tag">まつげサロン</span>
+    <p>確かな技術と上質な空間で、内側から輝く美しさへ導きます。</p>
+  </div>
+</section>
+<section class="contact">
+  <h2>店舗情報</h2>
+  <div class="contact-card"><p class="contact-line"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>広島県広島市中区鉄砲町8-24</span></p></div>
+  
+</section>
 </main>
-<footer style="text-align:center;padding:24px;font-size:.75rem;color:#999">これは営業提案用の無料デモサイトです。</footer>
+<footer>これは営業提案用の無料デモサイトです。</footer>
 </body></html>
