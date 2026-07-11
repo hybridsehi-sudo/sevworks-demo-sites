@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>エトランゼ美容室 | デモサイト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+ :root{
+   --bg:#f7f5f3; --surface:#ffffff; --primary:#1c1c1c; --primary-dark:#000000;
+   --accent:#caa06a; --text:#201f1e; --sub:#655f5a;
+ }
+ *{box-sizing:border-box}
+ body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;margin:0}
+ h1,h2,.serif{font-family:"Shippori Mincho",serif}
+ .notice{background:#fff3cd;color:#664d03;text-align:center;padding:8px 16px;font-size:.78rem}
+ a{color:inherit}
+ .site-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 28px;background:var(--surface);border-bottom:1px solid #00000012}
+ .site-header .brand{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.05rem;letter-spacing:.04em}
+ .site-header .brand small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.62rem;letter-spacing:.18em;color:var(--sub);font-weight:500;margin-top:2px}
+ .header-cta{background:var(--primary);color:#fff;padding:10px 22px;border-radius:999px;font-size:.8rem;text-decoration:none;letter-spacing:.05em;white-space:nowrap;box-shadow:0 4px 14px -4px color-mix(in srgb, var(--primary) 60%, transparent)}
+ .hero{position:relative;background:linear-gradient(135deg, color-mix(in srgb, var(--primary) 78%, black) 0%, color-mix(in srgb, var(--primary) 55%, transparent) 55%, color-mix(in srgb, var(--primary-dark) 70%, transparent) 100%), url('https://picsum.photos/seed/%E3%82%A8%E3%83%88%E3%83%A9%E3%83%B3%E3%82%BC%E7%BE%8E%E5%AE%B9%E5%AE%A4/1600/900');background-size:cover;background-position:center;overflow:hidden;padding:100px 24px;text-align:center;color:#fff}
+ .hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg, #caa06a26 0 2px, transparent 2px 26px)}
+ .hero-inner{position:relative;max-width:720px;margin:0 auto}
+ .hero .eyebrow{font-family:"Zen Kaku Gothic New",sans-serif;font-size:.72rem;letter-spacing:.32em;color:#fff;opacity:.85;margin:0 0 18px}
+ .hero h1{font-size:2.3rem;margin:0 0 16px;letter-spacing:.03em;font-weight:700;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+ .hero .catch{font-size:1.05rem;opacity:.95;margin:0;letter-spacing:.02em;color:#fff}
+ .hero .catch mark{background:var(--accent);color:#1a1a1a;padding:.05em .3em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+ main{max-width:760px;margin:0 auto;padding:0 20px}
+ section{padding:52px 0}
+ section h2{font-size:1.3rem;text-align:center;margin:0 0 32px;letter-spacing:.06em;position:relative}
+ section h2::after{content:"";display:block;width:36px;height:2px;background:var(--accent);margin:14px auto 0}
+ .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+ .feature-card{background:var(--surface);border:1px solid #00000012;border-radius:10px;padding:22px 18px;text-align:center}
+ .feature-icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--primary);color:#fff;margin-bottom:12px}
+ .feature-card p{margin:0;font-size:.88rem;color:var(--text)}
+ .menu-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+ .menu-list li{background:var(--surface);border-left:3px solid var(--accent);padding:14px 18px;font-size:.9rem}
+ .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+ .gallery-grid img{width:100%;height:150px;object-fit:cover;border-radius:10px;display:block}
+ .about-box{background:var(--surface);border-radius:12px;padding:32px 28px;text-align:center}
+ .about-box .industry-tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;color:#fff;background:var(--primary);padding:4px 14px;border-radius:20px;margin-bottom:14px}
+ .about-box p{margin:0;font-size:.95rem;color:var(--text);text-align:left}
+ .faq-item{background:var(--surface);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+ .faq-item:last-child{margin-bottom:0}
+ .faq-q{margin:0 0 8px;font-weight:700;color:var(--primary);font-size:.92rem}
+ .faq-a{margin:0;font-size:.9rem;color:var(--text)}
+ .contact-card{background:var(--surface);border:1px solid #00000012;border-radius:12px;padding:28px}
+ .contact-line{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:.92rem}
+ .contact-line:last-child{margin-bottom:0}
+ .contact-line a{text-decoration:none;font-weight:600}
+ .cta-wrap{text-align:center;margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+ .cta-button{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;padding:14px 32px;border-radius:999px;font-size:.88rem;letter-spacing:.04em;box-shadow:0 8px 20px -6px color-mix(in srgb, var(--primary) 55%, transparent)}
+ .cta-button.cta-outline{background:transparent;color:var(--primary);border:1.5px solid var(--primary);box-shadow:none}
+ footer{text-align:center;padding:26px 26px 84px;font-size:.72rem;color:var(--sub)}
+ .float-contact{position:fixed;right:18px;bottom:18px;z-index:10;background:var(--primary);color:#fff;border-radius:999px;padding:12px 20px;text-decoration:none;font-size:.78rem;letter-spacing:.03em;display:flex;align-items:center;gap:8px;box-shadow:0 10px 24px -8px rgba(0,0,0,.35)}
+ .float-contact svg{width:16px;height:16px;flex:none}
+ @media (max-width:480px){
+   .site-header{padding:14px 18px}
+   .hero{padding:64px 18px}
+   .hero h1{font-size:1.6rem}
+   .hero .catch{font-size:.92rem}
+   section{padding:38px 0}
+   .about-box,.contact-card{padding:24px 20px}
+   .gallery-grid img{height:120px}
+ }
+</style></head>
+<body>
+<div class="notice">株式会社セブワークスが提案用に作成したサンプルです。エトランゼ美容室様の公式サイトではありません。画像はイメージのサンプル写真です。</div>
+<header class="site-header">
+  <div class="brand">エトランゼ美容室<small>HAIR SALON</small></div>
+  <a class="header-cta" href="tel:082-220-3045">お電話でのお問い合わせ</a>
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">HAIR SALON</p>
+    <h1>エトランゼ美容室</h1>
+    <p class="catch">エトランゼ美容室 — <mark>地域で選ばれる、確かな技術と居心地の良さ。</mark></p>
+  </div>
+</section>
+<main>
+<section class="strengths">
+  <h2>選ばれる理由</h2>
+  <div class="feature-grid"><div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>経験豊富なスタイリストによる丁寧なカウンセリング</p></div>
+<div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>落ち着いた店内でリラックスできる空間</p></div>
+<div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>スマホから簡単に空き状況を確認・予約</p></div>
+<div class="feature-card"><span class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>お客様一人ひとりに合わせた提案力</p></div></div>
+</section>
+<section class="menu">
+  <h2>メニュー</h2>
+  <ul class="menu-list"><li>カット</li>
+<li>カラー</li>
+<li>パーマ</li>
+<li>トリートメント</li>
+<li>縮毛矯正</li></ul>
+</section>
+<section class="gallery">
+  <h2>店内・雰囲気</h2>
+  <div class="gallery-grid"><img src="https://picsum.photos/seed/%E3%82%A8%E3%83%88%E3%83%A9%E3%83%B3%E3%82%BC%E7%BE%8E%E5%AE%B9%E5%AE%A4-1/600/450" alt="エトランゼ美容室のイメージ写真1" loading="lazy">
+<img src="https://picsum.photos/seed/%E3%82%A8%E3%83%88%E3%83%A9%E3%83%B3%E3%82%BC%E7%BE%8E%E5%AE%B9%E5%AE%A4-2/600/450" alt="エトランゼ美容室のイメージ写真2" loading="lazy">
+<img src="https://picsum.photos/seed/%E3%82%A8%E3%83%88%E3%83%A9%E3%83%B3%E3%82%BC%E7%BE%8E%E5%AE%B9%E5%AE%A4-3/600/450" alt="エトランゼ美容室のイメージ写真3" loading="lazy"></div>
+</section>
+<section class="about">
+  <h2>エトランゼ美容室について</h2>
+  <div class="about-box">
+    <span class="industry-tag">美容室</span>
+    <p>確かな技術と心地よい空間で、お客様の「なりたい」を叶えるヘアサロンです。丁寧なカウンセリングを大切にし、髪質やライフスタイルに合わせた無理のないスタイルをご提案します。初めての方も安心してご来店いただけるよう、落ち着いた雰囲気づくりを心がけています。</p>
+  </div>
+</section>
+<section class="faq">
+  <h2>よくあるご質問</h2>
+  <div class="faq-item"><p class="faq-q">Q. 予約は必要ですか？</p><p class="faq-a">A. はい、確実にご案内するためご予約をおすすめしています。お電話にて空き状況をご確認ください。</p></div>
+<div class="faq-item"><p class="faq-q">Q. 駐車場はありますか？</p><p class="faq-a">A. 近隣にコインパーキングがございます。詳しくはお電話でお問い合わせください。</p></div>
+</section>
+<section class="contact">
+  <h2>店舗情報</h2>
+  <div class="contact-card"><p class="contact-line"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:082-220-3045">082-220-3045</a></p>
+<p class="contact-line"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA%E6%88%B8%E5%9D%82%E4%B8%AD%E7%94%BA6-45" target="_blank" rel="noopener">広島県広島市東区戸坂中町6-45(地図で見る)</a></p></div>
+  <div class="cta-wrap"><a class="cta-button" href="tel:082-220-3045">電話でのお問い合わせ</a></div>
+</section>
+</main>
+<footer>これは営業提案用の無料デモサイトです。</footer>
+<a class="float-contact" href="tel:082-220-3045"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>お電話</a>
+</body></html>
